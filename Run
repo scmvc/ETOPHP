@@ -12,7 +12,32 @@ class ETOPHP
 	}
 
 	public static function Run(){
-		require "../../_Route/routes.php";
+		self::AutoLoadInit();
+		self::DBInit();
+		self::RouteInit();
+	}
+
+
+	private static DBInit(){
+		$DB = new Illuminate\Database\Capsule\Manager;
+		$DB->addConnection(require "../App/Config/DBConfig.php");
+		$DB->bootEloquent();
+	}
+
+	/**
+	 * 初始化路由
+	 */
+	private static function RouteInit(){
+		require "../_Route/routes.php";
 		\NoahBuscher\Macaw\Macaw::dispatch();
 	}
+
+	/**
+	 * 初始化自动加载机制
+	 */
+	private static function AutoLoadInit(){
+		require 'vendor/autoload.php';
+	}
+
+
 }
