@@ -1,0 +1,12 @@
+{
+    "name": "michaeljions/etophp",
+    "description": "etophp",
+    "type": "library",
+    "authors": [
+        {
+            "name": "michael jions",
+            "email": "chen@cnscbv.com"
+        }
+    ],
+    "require": {}
+}
