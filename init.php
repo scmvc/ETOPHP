@@ -15,7 +15,7 @@ class init
 	}
 
 	public static function Run(){
-		$dir =  dirname(dirname(dirname(__FILE__)));
+		$dir =  dirname(dirname(dirname(dirname(__FILE__))));
 		require $dir."/vendor/autoload.php";
 		$DB = new DB;
 		$DB->addConnection(require $dir."/Config/DBConfig.php");
