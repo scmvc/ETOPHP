@@ -20,7 +20,7 @@ class init
 		$DB = new DB;
 		$DB->addConnection(require $dir."/Config/DBConfig.php");
 		$DB->bootEloquent();
-		require $dir.'_Route/routes.php';
+		require $dir.'/_Route/routes.php';
 		etophp\tool\Route::dispatch();
 	}
 }
