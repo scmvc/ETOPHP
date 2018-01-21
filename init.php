@@ -21,6 +21,6 @@ class init
 		$DB->addConnection(require $dir."/Config/DBConfig.php");
 		$DB->bootEloquent();
 		require $dir.'/_Route/routes.php';
-		etophp\tool\Route::dispatch();
+		\etophp\tool\Route::dispatch();
 	}
 }
