@@ -2,7 +2,7 @@
 /**
  *
  */
-namespace BaseController;
+namespace etophp\tool;
 class Controller {
 
 	protected $logger = "";

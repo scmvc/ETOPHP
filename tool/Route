@@ -1,5 +1,5 @@
 <?php
-namespace Route;
+namespace etophp\tool;
 /**
  * @method static Macaw get(string $route, Callable $callback)
  * @method static Macaw post(string $route, Callable $callback)
