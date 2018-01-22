@@ -137,5 +137,19 @@ class Controller {
 		}
 	}
 
+	protected function FileUpload($file){
+		if ($file["file"]["error"] > 0)
+		{
+			return 0;
+		}
+		else
+		{
+			$enS = strstr($file["file"]["name"], '.');
+			$NewFileName = $this->UUID().$enS;
+			$res = move_uploaded_file($file["file"]["tmp_name"],"Upload/" . $NewFileName);
+			return 1;
+		}
+	}
+
 
 }
