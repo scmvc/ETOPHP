@@ -2,9 +2,6 @@
 namespace etophp\init;
 
 use Illuminate\Database\Capsule\Manager as DB;
-use Monolog\Logger;
-use Monolog\Handler\StreamHandler;
-use Monolog\Handler\FirePHPHandler;
 /**
 * ETO PHP Init
 */
